@@ -1,0 +1,76 @@
+{
+  "project_info": {
+    "project_number": "450220155106",
+    "project_id": "login-checker-67c42",
+    "storage_bucket": "login-checker-67c42.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:450220155106:android:6d8a3f306057e6d6cafebb",
+        "android_client_info": {
+          "package_name": "com.example.login_checker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "450220155106-cd8enhmdfonh57bdhhe2n9o22vbg2vk7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlUiCtZE3WlEVPqN79b9FHuUQDwHHzZDo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "450220155106-cd8enhmdfonh57bdhhe2n9o22vbg2vk7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:450220155106:android:45fe40f0c864a343cafebb",
+        "android_client_info": {
+          "package_name": "com.example.loginkt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "450220155106-t9beo250nmfcegol8u9ku3dm4ur0h7os.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.loginkt",
+            "certificate_hash": "9dcbee8e67dfd9f788262e36f7239a2c30ec5b73"
+          }
+        },
+        {
+          "client_id": "450220155106-cd8enhmdfonh57bdhhe2n9o22vbg2vk7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlUiCtZE3WlEVPqN79b9FHuUQDwHHzZDo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "450220155106-cd8enhmdfonh57bdhhe2n9o22vbg2vk7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

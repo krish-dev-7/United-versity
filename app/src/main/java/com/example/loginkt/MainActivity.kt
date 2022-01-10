@@ -7,29 +7,39 @@ import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import com.google.firebase.auth.FirebaseAuth
 
 
 lateinit var emailG :String
 lateinit var passG :String
-
+lateinit var auth: FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        auth =  FirebaseAuth.getInstance()
+        title = "Login"
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        var emailRef = findViewById<TextView>(R.id.emailTxt)
-        var passRef = findViewById<TextView>(R.id.passwordTxt)
-        var loginRef = findViewById<Button>(R.id.loginBtn)
+        val emailRef = findViewById<TextView>(R.id.emailTxt)
+        val passRef = findViewById<TextView>(R.id.passwordTxt)
+        val loginRef = findViewById<Button>(R.id.loginBtn)
+        val sUpTBRef = findViewById<Button>(R.id.SupTB)
+        sUpTBRef.setOnClickListener{
+            val intent= Intent(this,RegisterActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
         loginRef.setOnClickListener {
             emailG = emailRef.text.toString()
             passG = passRef.text.toString()
-            if(emailG=="1234" && passG=="1234"){
-                val intent =Intent(this, HomeActivity::class.java)
-                startActivity(intent)
-                Toast.makeText(applicationContext,"Logged in!",Toast.LENGTH_SHORT).show()
-            }
-            else{
-                Toast.makeText(applicationContext,"Wrong Password", Toast.LENGTH_SHORT).show()
+            auth.signInWithEmailAndPassword(emailG,passG).addOnCompleteListener { task ->
+                if(task.isSuccessful){
+                    val intent= Intent(this,HomeActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                }
+            }.addOnFailureListener { exception ->
+                Toast.makeText(applicationContext,exception.localizedMessage, Toast.LENGTH_LONG).show()
             }
         }
 

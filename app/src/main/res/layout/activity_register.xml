@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#492AD5"
-    tools:context=".MainActivity">
+    android:background="#F40606"
+    tools:context=".RegisterActivity">
 
     <RelativeLayout
         android:layout_width="480dp"
@@ -15,50 +15,41 @@
         android:background="#EDFFFFFF"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toTopOf="parent">
 
         <EditText
-            android:id="@+id/emailTxt"
+            android:id="@+id/emailTxtR"
             android:layout_width="330dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:layout_marginTop="76dp"
-            android:ems="10"
-            android:inputType="textEmailAddress"
-            android:hint="@string/email"
             android:autofillHints="krish0cyber@gmail.com"
+            android:ems="10"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
             tools:ignore="TextFields" />
+
         <EditText
-            android:id="@+id/passwordTxt"
+            android:id="@+id/passwordTxtR"
             android:layout_width="330dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:layout_marginTop="200dp"
+            android:autofillHints="kk"
             android:ems="10"
-            android:inputType="textPassword"
             android:hint="@string/password"
-            android:autofillHints="krish0cyber@gmail.com"
+            android:inputType="textPassword"
             tools:ignore="TextFields" />
 
         <Button
-            android:id="@+id/loginBtn"
+            android:id="@+id/regBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/login"
-            android:visibility="visible"
             android:layout_marginStart="170dp"
-            android:layout_marginTop="300dp"/>
-
-        <Button
-            android:id="@+id/SupTB"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="260dp"
-            android:layout_marginTop="450dp"
-            android:text="@string/sign_up_tb"
-            android:textColor="#0C44EA"
-            app:backgroundTint="#E4F8EAEA"
-            app:iconTint="#3A2E2E" />
+            android:layout_marginTop="300dp"
+            android:text="@string/sign_up"
+            android:visibility="visible"
+            app:backgroundTint="#FA0000" />
     </RelativeLayout>
 
     <TextView

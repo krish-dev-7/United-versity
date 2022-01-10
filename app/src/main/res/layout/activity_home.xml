@@ -10,11 +10,12 @@
         android:id="@+id/greetTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="120dp"
-        android:layout_marginTop="336dp"
+        android:gravity="center"
+        android:layout_marginStart="164dp"
+        android:layout_marginTop="316dp"
         android:text="@string/welcome"
         android:textColor="#FF5722"
-        android:textSize="40sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
