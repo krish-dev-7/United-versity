@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">LoginKt</string>
+    <string name="welcome">Welcome</string>
+    <string name="email">Email</string>
+    <string name="password">password</string>
+    <string name="login">Login</string>
+</resources>
