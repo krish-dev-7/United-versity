@@ -27,7 +27,7 @@ class RegisterActivity : AppCompatActivity(){
             passG = passRef.text.toString()
             auth.createUserWithEmailAndPassword(emailG, passG).addOnCompleteListener { task ->
                 if(task.isSuccessful){
-                    
+
                     val intent= Intent(this,MainActivity::class.java)
                     startActivity(intent)
                     finish()
