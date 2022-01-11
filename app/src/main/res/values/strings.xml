@@ -4,6 +4,17 @@
     <string name="email">Email</string>
     <string name="password">password</string>
     <string name="login">Login</string>
-    <string name="sign_up">Sign up</string>
+    <string name="sign_up">Sign Up</string>
     <string name="sign_up_tb">Sign up ?</string>
+    <string name="name">name</string>
+    <string name="register_number">register number</string>
+    <string name="cse">cse</string>
+    <string name="ece">ECE</string>
+    <string name="eee">EEE</string>
+    <string name="mech">Mech</string>
+    <string name="year_1">year 1</string>
+    <string name="year_2">year 2</string>
+    <string name="year_3">year 3</string>
+    <string name="year_4">year 4</string>
+    <string name="not_a_member">Not a member</string>
 </resources>

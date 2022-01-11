@@ -4,37 +4,63 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F40606"
+    android:background="#492AD5"
     tools:context=".RegisterActivity">
 
     <RelativeLayout
-        android:layout_width="480dp"
-        android:layout_height="574dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="188dp"
+        android:layout_width="401dp"
+        android:layout_height="564dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="4dp"
         android:background="#EDFFFFFF"
         android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <EditText
             android:id="@+id/emailTxtR"
+            android:padding="10dp"
             android:layout_width="330dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
-            android:layout_marginTop="76dp"
+            android:layout_marginTop="70dp"
             android:autofillHints="krish0cyber@gmail.com"
             android:ems="10"
             android:hint="@string/email"
             android:inputType="textEmailAddress"
             tools:ignore="TextFields" />
-
         <EditText
-            android:id="@+id/passwordTxtR"
+            android:id="@+id/name"
+            android:padding="10dp"
             android:layout_width="330dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="140dp"
+            android:autofillHints="krish0cyber@gmail.com"
+            android:ems="10"
+            android:hint="@string/name"
+            tools:ignore="TextFields" />
+        <EditText
+            android:id="@+id/regNo"
+            android:padding="10dp"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="210dp"
+            android:autofillHints="krish0cyber@gmail.com"
+            android:hint="@string/register_number"
+            android:inputType="number"
+            tools:ignore="TextFields" />
+
+        <EditText
+            android:id="@+id/passwordTxtR"
+            android:padding="10dp"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="280dp"
             android:autofillHints="kk"
             android:ems="10"
             android:hint="@string/password"
@@ -45,21 +71,103 @@
             android:id="@+id/regBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="170dp"
-            android:layout_marginTop="300dp"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="500dp"
             android:text="@string/sign_up"
-            android:visibility="visible"
-            app:backgroundTint="#FA0000" />
+            android:visibility="visible" />
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/dptToggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            app:singleSelection="true"
+            android:layout_marginTop="350dp"
+            >
+            <Button
+                android:id="@+id/cse"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/pBlue"
+                android:text="@string/cse"
+                android:visibility="visible" />
+            <Button
+                android:id="@+id/ece"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/pBlue"
+                android:text="@string/ece"
+                android:visibility="visible" />
+            <Button
+                android:id="@+id/eee"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/pBlue"
+                android:text="@string/eee"
+                android:visibility="visible" />
+            <Button
+                android:id="@+id/mech"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/pBlue"
+                android:text="@string/mech"
+                android:visibility="visible" />
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/yrToggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            app:singleSelection="true"
+            android:layout_marginTop="400dp"
+            >
+            <Button
+                android:id="@+id/yr1"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/pBlue"
+                android:text="@string/year_1"
+                android:visibility="visible" />
+            <Button
+                android:id="@+id/yr2"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/pBlue"
+                android:text="@string/year_2"
+                android:visibility="visible" />
+            <Button
+                android:id="@+id/yr3"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/pBlue"
+                android:text="@string/year_3"
+                android:visibility="visible" />
+            <Button
+                android:id="@+id/yr4"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/pBlue"
+                android:text="@string/year_4"
+                android:visibility="visible" />
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
     </RelativeLayout>
 
     <TextView
         android:id="@+id/welcomeTxt"
         android:layout_width="189dp"
         android:layout_height="66dp"
-        android:layout_marginStart="132dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="36dp"
         android:fontFamily="monospace"
-        android:text="@string/welcome"
+        android:text="@string/sign_up"
         android:textColor="#FFFFFF"
         android:textSize="40sp"
         app:layout_constraintStart_toStartOf="parent"
