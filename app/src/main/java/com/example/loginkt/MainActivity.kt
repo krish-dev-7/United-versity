@@ -3,7 +3,6 @@ package com.example.loginkt
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
@@ -15,6 +14,17 @@ lateinit var passG :String
 lateinit var auth: FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
+    private fun firebaseLogin(email:String, pass:String){
+        auth.signInWithEmailAndPassword(email,pass).addOnCompleteListener { task ->
+            if(task.isSuccessful){
+                val intent= Intent(this,HomeActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
+        }.addOnFailureListener { exception ->
+            Toast.makeText(applicationContext,exception.localizedMessage, Toast.LENGTH_LONG).show()
+        }
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         auth =  FirebaseAuth.getInstance()
         title = "Login"
@@ -32,15 +42,7 @@ class MainActivity : AppCompatActivity() {
         loginRef.setOnClickListener {
             emailG = emailRef.text.toString()
             passG = passRef.text.toString()
-            auth.signInWithEmailAndPassword(emailG,passG).addOnCompleteListener { task ->
-                if(task.isSuccessful){
-                    val intent= Intent(this,HomeActivity::class.java)
-                    startActivity(intent)
-                    finish()
-                }
-            }.addOnFailureListener { exception ->
-                Toast.makeText(applicationContext,exception.localizedMessage, Toast.LENGTH_LONG).show()
-            }
+            firebaseLogin(emailG, passG)
         }
 
     }
