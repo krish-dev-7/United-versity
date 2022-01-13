@@ -17,4 +17,9 @@
     <string name="year_3">year 3</string>
     <string name="year_4">year 4</string>
     <string name="not_a_member">Not a member</string>
+    <string name="add_question">Add question</string>
+    <string name="subject_name">Subject Name</string>
+    <string name="enter_your_question">Enter your question</string>
+    <string name="ask">Ask</string>
+    <string name="ask_your_question">Ask your Question</string>
 </resources>

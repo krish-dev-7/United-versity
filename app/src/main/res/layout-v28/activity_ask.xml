@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/screen_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/subjectName"
+        android:layout_width="288dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="43dp"
+        android:autofillHints="ntg"
+        android:ems="10"
+        android:hint="@string/subject_name"
+        android:inputType="textPersonName"
+        android:padding="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/questionBy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.471"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/qnsHeader"
+        app:layout_constraintVertical_bias="0.268" />
+
+
+    <EditText
+        android:id="@+id/questionBy"
+        android:layout_width="289dp"
+        android:layout_height="209dp"
+        android:autofillHints="ntg"
+        android:ems="10"
+        android:hint="@string/enter_your_question"
+        android:inputType="textMultiLine"
+        android:padding="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.467"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.578" />
+
+    <LinearLayout
+        android:id="@+id/qnsHeader"
+        android:layout_width="411dp"
+        android:layout_height="136dp"
+        android:background="@color/pBlue"
+        android:orientation="vertical"
+        android:outlineAmbientShadowColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="90dp"
+            android:text="@string/ask_your_question"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/askBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ask"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questionBy" />
+</androidx.constraintlayout.widget.ConstraintLayout>

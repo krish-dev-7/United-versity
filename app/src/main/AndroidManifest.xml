@@ -18,6 +18,7 @@
         </activity>
         <activity android:name=".HomeActivity"/>
         <activity android:name=".RegisterActivity"/>
+        <activity android:name=".AskActivity"/>
     </application>
 
 </manifest>

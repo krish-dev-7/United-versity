@@ -15,7 +15,7 @@ class RegisterActivity : AppCompatActivity(){
         auth.createUserWithEmailAndPassword(user.email, user.pass).addOnCompleteListener { task ->
             if(task.isSuccessful){
                 Log.v("RegisterActivity", user.name)
-                    adUserDB(user)
+                    addUserDB(user)
                         .addOnSuccessListener { Toast.makeText(this, "user created!", Toast.LENGTH_SHORT).show() }
                         .addOnFailureListener{exception -> Toast.makeText(applicationContext,exception.localizedMessage, Toast.LENGTH_LONG).show()}
                 val intent= Intent(this,MainActivity::class.java)

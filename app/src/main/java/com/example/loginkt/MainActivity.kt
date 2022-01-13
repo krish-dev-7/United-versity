@@ -15,14 +15,20 @@ lateinit var auth: FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
     private fun firebaseLogin(email:String, pass:String){
-        auth.signInWithEmailAndPassword(email,pass).addOnCompleteListener { task ->
-            if(task.isSuccessful){
-                val intent= Intent(this,HomeActivity::class.java)
-                startActivity(intent)
-                finish()
-            }
-        }.addOnFailureListener { exception ->
-            Toast.makeText(applicationContext,exception.localizedMessage, Toast.LENGTH_LONG).show()
+        if (email != ""||pass != "") {
+                auth.signInWithEmailAndPassword(email,pass).addOnCompleteListener { task ->
+                    if(task.isSuccessful){
+                        getUser()
+                        val intent= Intent(this,HomeActivity::class.java)
+                        startActivity(intent)
+                        finish()
+                    }
+                }.addOnFailureListener { exception ->
+                    Toast.makeText(applicationContext,exception.localizedMessage, Toast.LENGTH_LONG).show()
+                }
+        }
+        else{
+            Toast.makeText(applicationContext,"Enter all the fields", Toast.LENGTH_LONG).show()
         }
     }
     override fun onCreate(savedInstanceState: Bundle?) {
