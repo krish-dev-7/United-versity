@@ -3,6 +3,7 @@ package com.example.loginkt
 import android.util.Log
 import android.widget.Toast
 import com.google.android.gms.tasks.Task
+import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
 
@@ -38,8 +39,12 @@ fun getUser():Boolean{
     return flag
 }
 
-fun addQuestion(question : Question): Task<Void> {
+fun addQuestion(question : Question): Task<DocumentReference> {
     val db = FirebaseFirestore.getInstance()
-    val data = hashMapOf("question" to question.question, "answerIndex" to question.answerIndex,"subject" to question.subject, "name" to question.name)
-    return db.collection(question.year.toString()).document(question.dept).set(data, SetOptions.merge())
+    val data = hashMapOf("dept" to question.dept,"question" to question.question, "answerIndex" to question.answerIndex,"subject" to question.subject, "name" to question.name)
+    //added 2-->randomDocId-->question
+    return db.collection(question.year.toString()).add(data).addOnSuccessListener {
+        val userQn = hashMapOf("question" to question.question, "answerIndex" to question.answerIndex,"subject" to question.subject)
+        //added user-->userEmail-->askedQn-->question
+        FirebaseFirestore.getInstance().collection("User").document(signedUser.email).collection("askedQn").add(userQn) }
 }

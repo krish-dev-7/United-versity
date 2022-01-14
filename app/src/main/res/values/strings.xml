@@ -22,4 +22,7 @@
     <string name="enter_your_question">Enter your question</string>
     <string name="ask">Ask</string>
     <string name="ask_your_question">Ask your Question</string>
+    <string name="no_question">No Question</string>
+    <string name="answers">Answers :</string>
+    <string name="answer1">Answer1</string>
 </resources>

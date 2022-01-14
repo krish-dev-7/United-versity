@@ -43,7 +43,6 @@ class MainActivity : AppCompatActivity() {
         sUpTBRef.setOnClickListener{
             val intent= Intent(this,RegisterActivity::class.java)
             startActivity(intent)
-            finish()
         }
         loginRef.setOnClickListener {
             emailG = emailRef.text.toString()
