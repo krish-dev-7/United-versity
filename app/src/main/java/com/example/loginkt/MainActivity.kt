@@ -3,6 +3,7 @@ package com.example.loginkt
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
@@ -18,10 +19,11 @@ class MainActivity : AppCompatActivity() {
         if (email != ""||pass != "") {
                 auth.signInWithEmailAndPassword(email,pass).addOnCompleteListener { task ->
                     if(task.isSuccessful){
-                        getUser()
-                        val intent= Intent(this,HomeActivity::class.java)
-                        startActivity(intent)
-                        finish()
+                        getUser().addOnSuccessListener {
+                            val intent= Intent(this,HomeActivity::class.java)
+                            startActivity(intent)
+                            finish()
+                        }
                     }
                 }.addOnFailureListener { exception ->
                     Toast.makeText(applicationContext,exception.localizedMessage, Toast.LENGTH_LONG).show()

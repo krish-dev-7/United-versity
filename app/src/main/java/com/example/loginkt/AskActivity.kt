@@ -31,6 +31,6 @@ class AskActivity : AppCompatActivity() {
     private fun createQuestionObj(): Question {
         val qnRef = findViewById<EditText>(R.id.questionBy)
         val subRef = findViewById<EditText>(R.id.subjectName)
-        return Question(signedUser.name, signedUser.year, signedUser.dept,qnRef.text.toString(),subRef.text.toString())
+        return Question(signedUser.name, signedUser.email,signedUser.year, signedUser.dept,qnRef.text.toString(),subRef.text.toString())
     }
 }

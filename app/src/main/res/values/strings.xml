@@ -25,4 +25,9 @@
     <string name="no_question">No Question</string>
     <string name="answers">Answers :</string>
     <string name="answer1">Answer1</string>
+    <string name="visible_if_list_is_empty">visible if list is empty</string>
+    <string name="not_answerd_write_yours">not answerd!, write Yours!</string>
+    <string name="your_answer">Your answer</string>
+    <string name="senBtn"><![CDATA[>]]></string>
+    <string name="sendbutton">SendButton</string>
 </resources>
